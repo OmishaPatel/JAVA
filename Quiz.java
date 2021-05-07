@@ -1,7 +1,22 @@
 public class Quiz {
 
 	public static void main(String[] args) {
-		MultipleChoiceQuestion question = new MultipleChoiceQuestion(
+		Question question = new TrueFalseQuestion("Do humans have four hands?", "no");
+		question.check();
+		
+		question = new TrueFalseQuestion("Is flying one of your superpowers?","yes");
+		question.check();
+		
+		question = new TrueFalseQuestion("Are quizzez fun?","y");
+		question.check();
+		
+		question = new TrueFalseQuestion("Do you like programming?","Yes");
+		question.check();
+		
+		question = new TrueFalseQuestion("Do humans have 40 teeth?","NO");
+		question.check();
+		
+		question = new MultipleChoiceQuestion(
 				"What is the name of German Airline?",
 				 "Delta",
 				 "United",
@@ -10,7 +25,7 @@ public class Quiz {
 				 "Avianca",
 				 "c");
 		question.check();
-		 //resetting the reference value of question variable by creating new object
+		
 		question = new MultipleChoiceQuestion(
 				"What is the capital city of Chile?",
 				 "Santiago",
@@ -56,3 +71,4 @@ public class Quiz {
 			}
 	
 }
+
